@@ -1,0 +1,28 @@
+{% load static %}
+<header class="flex-area">
+    <div>
+        <h1>Imagem aqui</h1>
+    </div>
+    <div class="flex-area">
+        <!-- <a href="#">Product</a>
+        <a href="#">Feature</a> 
+        <a href="#">MarketPlace</a> -->
+        <form>
+            <div class="searchBox">
+                <input placeholder="Search for a post" class="input" name="text" autocomplete="off" type="text"/>
+                <button class="searchButton" href="#">
+                    <img src="{% static './blog_system/assets/img/magnifier.svg' %}" alt="Search Button" width="25" height="25">
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="flex-area">
+
+        <div class="sign-buttons sign-in-button">
+            <button><span></span><p data-text="sign in" data-title="sign in"></p></button>
+        </div>
+        <div class="sign-buttons">
+            <button><span></span><p data-text="sign up" data-title="sign up"></p></button>
+        </div>
+    </div>
+</header>

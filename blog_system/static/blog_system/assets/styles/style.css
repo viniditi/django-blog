@@ -1,0 +1,211 @@
+:root {
+    --blue-main-color: #009EFD;
+    --green-main-color: #3aedbd;
+    --site-background-color: #F5F5EC;
+    --text-color: #000;
+    --color-white: #fff;
+    --light-gray-color: #e1e2e3;
+    --medium-gray-color: #969696;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: var(--site-background-color) ;
+}
+
+header {
+    padding: 10px;
+}
+
+input {
+    border: none;
+    border-radius: 5px;
+    margin: 7px;
+    padding: 5px;
+}
+
+.flex-area {
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin: 10px 15px;
+}
+
+
+.footer {
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* Serach button */
+.searchBox {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.searchButton {
+  color: var(--color-white);
+  margin-right: 5px;
+  position: absolute;
+  right: 8px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: var(--gradient-2, linear-gradient(120deg, var(--blue-main-color) 0%, var(--green-main-color) 100%));
+  border: 0;
+  display: inline-block;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+}
+
+button:hover {
+  color: var(--color-white);
+  background-color: var(--text-color);
+  box-shadow: rgba(0, 0, 0, 0.2) 0 10px 20px;
+  transform: translateY(-3px);
+}
+
+button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.input {
+  border: none;
+  outline: none;
+  border-radius: 100px;
+  width: 350px;
+  padding: 1em;
+  background-color: var(--light-gray-color);
+  box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
+  transition: 300ms ease-in-out;
+}
+
+.input:focus {
+  background-color: var(--color-white);
+  transform: scale(1.05);
+  box-shadow: 2px 2px 2px var(--medium-gray-color), -13px -13px 100px var(--color-white);
+}
+
+/* Sign up and Sign in sign-buttons */
+
+.sign-buttons button {
+  margin: 6px;
+  width: 100px;
+  height: 50px;
+  background-color: var(--site-background-color);
+  color: var(--blue-main-color);
+  position: relative;
+  overflow: hidden;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 0;
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+}
+/**/
+.sign-buttons button:before, .sign-buttons button:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--green-main-color);
+}
+
+.sign-buttons button:before {
+  right: 0;
+  top: 0;
+  transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+}
+
+.sign-buttons button:after {
+  left: 0;
+  bottom: 0;
+}
+
+.sign-buttons button span:before, .sign-buttons button span:after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 0;
+  background-color: var(--green-main-color);
+  transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+}
+
+.sign-buttons button span:before {
+  right: 0;
+  top: 0;
+  transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+}
+
+.sign-buttons button span:after {
+  left: 0;
+  bottom: 0;
+}
+
+.sign-buttons button p:before, .sign-buttons button p:after {
+  position: absolute;
+  width: 100%;
+  transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+  z-index: 1;
+}
+
+.sign-buttons button p:before {
+  content: attr(data-title);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sign-buttons button p:after {
+  content: attr(data-text);
+  top: 150%;
+  color: var(--green-main-color);
+}
+
+.sign-buttons button:hover:before, .sign-buttons button:hover:after {
+    width: 100%;
+}
+
+.sign-buttons button:hover span:before, .sign-buttons button:hover span:after {
+    height: 100%;
+}
+
+.sign-buttons button:hover p:before {
+    top: -50%;
+    transform: rotate(5deg);
+}
+
+.sign-buttons button:hover p:after {
+    top: 50%;
+  transform: translateY(-50%);
+}
+
+.sign-in-button button {
+    color: var(--green-main-color)
+}
+
+.sign-in-button button:hover p[data-text="sign in"]::after {
+    color: var(--blue-main-color);
+}
+/* teste */
+.sign-in-button button span:before,
+.sign-in-button button span:after {
+  background-color: var(--blue-main-color);
+}
+
+
+.sign-in-button button:before, .sign-in-button button:after {
+  background-color: var(--blue-main-color);
+}
